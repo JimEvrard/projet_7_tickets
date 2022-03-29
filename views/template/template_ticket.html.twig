@@ -1,0 +1,21 @@
+{% for order in orders %}
+
+<div class="flip-card mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front text-light bg-dark">
+    <ul class='list-unstyled'>
+    <li>{{ order.id }}</li>
+    <br>
+    <li>Prix Total</li> 
+    </ul>
+    </div>
+    <div class="flip-card-back">
+    <ul class='list-unstyled'>
+    <br>
+      
+    <li>Montant</li> 
+    </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}

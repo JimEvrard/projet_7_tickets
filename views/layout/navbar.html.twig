@@ -1,0 +1,96 @@
+<section class="container-fluid bg-dark sticky-top">
+	<div class="row">
+		<ul class="nav justify-content-end nav-tabs">
+	
+		{% if url == 'personal_page/:id' %}
+				<li class="nav-item">
+					<a class="nav-link active" href="/personal_page/">
+						<strong>Mon espace perso</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/pro_page/{{ user.id }}" >
+						<strong>Mon espace pro</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/update">
+						<strong>Modification</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/logout">
+						<strong>Deconnexion</strong>
+					</a>
+				</li>
+		{% elseif url == 'pro_page/:id' %}
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/personal_page/">
+						<strong>Mon espace perso</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="/pro_page/{{ user.id }}">
+						<strong>Mon espace pro</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/logout">
+						<strong>Deconnexion</strong>
+					</a>
+				</li>
+		{% elseif url=='/' %}
+				<li class="nav-item">
+					<a class="nav-link active" href="/">
+						<strong>Accueil</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/login">
+						<strong>Connexion</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/subscrite">
+						<strong>S'inscrire</strong>
+					</a>
+				</li>
+	
+		{% elseif url=='/login' %}
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/">
+						<strong>Accueil</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="/login">
+						<strong>Connexion</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/subscrite">
+						<strong>S'inscrire</strong>
+					</a>
+				</li>
+	
+		{% elseif url=='/subscrite' %}
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/">
+						<strong>Accueil</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-light" href="/login">
+						<strong>Connexion</strong>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="/subscrite">
+						<strong>S'inscrire</strong>
+					</a>
+				</li>
+	
+			{% endif %}
+		</ul>
+	</div>
+</section>
